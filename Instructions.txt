@@ -1,0 +1,8 @@
+- Install NodeJs and check version using node -v (https://nodejs.org/en)
+- Install NPM and check version using npm -v
+- Install Create React App (https://create-react-app.dev/)
+- To create a project app type:
+    npx create-react-app [project name]
+
+- rafce: Create a component code
+- imrs: Import useState

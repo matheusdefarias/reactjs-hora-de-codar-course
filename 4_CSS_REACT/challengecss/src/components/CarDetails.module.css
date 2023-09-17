@@ -1,0 +1,19 @@
+.card_car {
+    background-color: darkgray;
+    margin: 10px;
+    padding: 10px;
+    border: 1.5px solid rgb(43, 42, 43);
+    border-radius: 10px;
+}
+
+.new_car {
+    color: rgb(15, 15, 15);
+    background-color: greenyellow;
+    padding: 10px;
+}
+
+.used_car {
+    color: white;
+    background-color: red;
+    padding: 10px;
+}

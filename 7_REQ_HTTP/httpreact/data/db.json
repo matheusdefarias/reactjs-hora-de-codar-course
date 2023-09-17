@@ -1,0 +1,59 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 2,
+      "name": "Calça vermelha",
+      "price": 90
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "Boné",
+      "price": "20",
+      "id": 4
+    },
+    {
+      "name": "Camisa Polo",
+      "price": "55",
+      "id": 5
+    },
+    {
+      "name": "Luvas",
+      "price": "34",
+      "id": 6
+    },
+    {
+      "name": "Calça",
+      "price": "12",
+      "id": 7
+    },
+    {
+      "name": "Óculos",
+      "price": "45",
+      "id": 8
+    },
+    {
+      "name": "Notebook",
+      "price": "4500",
+      "id": 9
+    },
+    {
+      "name": "Celular",
+      "price": "6000",
+      "id": 10
+    },
+    {
+      "name": "Carro",
+      "price": "40000",
+      "id": 11
+    }
+  ]
+}
