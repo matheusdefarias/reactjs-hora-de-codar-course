@@ -2,24 +2,30 @@ import "./App.css";
 
 import { useState, useEffect } from "react";
 
+// 4 - Custom Hook
+import { useFetch } from "./hooks/useFetch";
+
+const url = "http://localhost:3000/products";
+
 function App() {
   const [products, setProducts] = useState([]);
+
+  // 4 - Custom Hook
+  const { data: items, httpConfig } = useFetch(url);
 
   const [name, setName] = useState("");
   const [price, setPrice] = useState("");
 
-  const url = "http://localhost:3000/products";
-
   // 1 - Resgatando dados
-  useEffect(() => {
-    async function fetchData() {
-      const res = await fetch(url);
-      const data = await res.json();
-      setProducts(data);
-    }
+  // useEffect(() => {
+  //   async function fetchData() {
+  //     const res = await fetch(url);
+  //     const data = await res.json();
+  //     setProducts(data);
+  //   }
 
-    fetchData();
-  }, []);
+  //   fetchData();
+  // }, []);
 
   // 2 - Adição de produtos
   const handleSubmit = async (e) => {
@@ -30,18 +36,21 @@ function App() {
       price,
     };
 
-    const res = await fetch(url, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(product),
-    });
+    // const res = await fetch(url, {
+    //   method: "POST",
+    //   headers: {
+    //     "Content-Type": "application/json",
+    //   },
+    //   body: JSON.stringify(product),
+    // });
 
-    // 3 - carregamento dinâmico
-    const addedProduct = await res.json();
+    // // 3 - carregamento dinâmico
+    // const addedProduct = await res.json();
 
-    setProducts((prevProducts) => [...prevProducts, addedProduct]);
+    // setProducts((prevProducts) => [...prevProducts, addedProduct]);
+
+    // 5 - Refatorando o POST
+    httpConfig(product, "POST");
 
     setName("");
     setPrice("");
@@ -51,11 +60,12 @@ function App() {
     <div className="App">
       <h1>Lista de Produtos</h1>
       <ul>
-        {products.map((product) => (
-          <li key={product.id}>
-            {product.name} - {product.price}
-          </li>
-        ))}
+        {items &&
+          items.map((product) => (
+            <li key={product.id}>
+              {product.name} - {product.price}
+            </li>
+          ))}
       </ul>
 
       <div className="add-product">

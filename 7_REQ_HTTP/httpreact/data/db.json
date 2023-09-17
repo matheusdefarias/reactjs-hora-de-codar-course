@@ -54,6 +54,11 @@
       "name": "Carro",
       "price": "40000",
       "id": 11
+    },
+    {
+      "name": "mouse",
+      "price": "60",
+      "id": 12
     }
   ]
 }
