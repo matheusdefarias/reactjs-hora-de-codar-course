@@ -1,0 +1,24 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Camisa",
+      "price": 59.9
+    },
+    {
+      "id": 3,
+      "name": "Boné aba reta",
+      "price": 29.9
+    },
+    {
+      "name": "Camisa Polo",
+      "price": "55",
+      "id": 5
+    },
+    {
+      "name": "Carro",
+      "price": "40000",
+      "id": 11
+    }
+  ]
+}
