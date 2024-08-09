@@ -9,6 +9,7 @@ import NotFound from './pages/NotFound';
 import Navbar from './components/Navbar';
 import Search from "./pages/Search";
 import { SearchForm } from "./components/SearchForm";
+import  SearchForme  from "./pages/SearchForme";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <SearchForm />
+        <SearchForme />
         <Routes>
           <Route path='/' element={<Home />} />
           <Route path='/about' element={<About />} />
@@ -30,6 +32,7 @@ function App() {
           <Route path='*' element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      
 
       {/* <footer>
         <h3>Rodapé</h3>
